@@ -93,7 +93,7 @@ namespace EnhancePointerPrecisionFixer
 			using (TaskService ts = new TaskService())
 			{
 				TaskDefinition td = ts.NewTask();
-				td.RegistrationInfo.Description = "Start the Enhance Pointer Precision Fixer tray application as administrator.";
+				td.RegistrationInfo.Description = "Start the Enhance Pointer Precision Fixer tray application.";
 				td.Triggers.Add(new LogonTrigger());
 				td.Actions.Add(new ExecAction(Globals.ApplicationDirectoryBase + Globals.ExecutableNameWithExtension, null, Globals.ApplicationRoot));
 				td.Principal.RunLevel = TaskRunLevel.LUA;
